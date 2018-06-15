@@ -118,7 +118,7 @@ namespace YoutubeDlToVlc
 				}
 
 				FileInfo batPath = new FileInfo(string.Format(@"{0}/{1}.bat", YoutubeDlPath.FullName, Guid.NewGuid().ToString("N")));
-				File.WriteAllText(batPath.FullName, string.Format("\"{0}\" \"{1}\" --ffmpeg-location \"{2}\" -o -| \"{3}\" -", YoutubeDlFile.FullName, tbStream.Text, ffmpegFile.FullName, VlcFile.FullName));
+				File.WriteAllText(batPath.FullName, string.Format("\"{0}\" \"{1}\" --format best --ffmpeg-location \"{2}\" -o -| \"{3}\" -", YoutubeDlFile.FullName, tbStream.Text, ffmpegFile.FullName, VlcFile.FullName));
 
 				Process run = new Process();
 				run.StartInfo.WorkingDirectory = YoutubeDlPath.FullName;
