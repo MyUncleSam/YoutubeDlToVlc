@@ -44,7 +44,7 @@ namespace YoutubeDlToVlc
 			{
 				ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 				WebClient wc = new WebClient();
-				wc.DownloadFile("https://yt-dl.org/downloads/2018.06.14/youtube-dl.exe", YoutubeDlFile.FullName);
+				wc.DownloadFile("https://github.com/ytdl-org/youtube-dl/releases/download/2021.02.10/youtube-dl.exe", YoutubeDlFile.FullName);
 			}
 
 			// always start update procedure at next step
